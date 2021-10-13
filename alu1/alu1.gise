@@ -92,6 +92,8 @@
     <transform xil_pn:end_ts="1634106178" xil_pn:in_ck="-6385618374387774883" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-7108996812460777562" xil_pn:start_ts="1634106178">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="alusnk_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
     </transform>
