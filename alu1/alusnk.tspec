@@ -1,0 +1,5 @@
+AUTO_TS_P2P:FROM:sel<2>:TO:out:1
+AUTO_TS_P2P:FROM:sel<0>:TO:out:1
+AUTO_TS_P2P:FROM:sel<1>:TO:out:1
+AUTO_TS_P2P:FROM:A<0>:TO:out:1
+AUTO_TS_P2P:FROM:B<0>:TO:out:1

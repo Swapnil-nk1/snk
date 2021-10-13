@@ -1,0 +1,51 @@
+MDF Database:  version 1.0
+MDF_INFO | alusnk | XC9536-5-PC44
+MACROCELL | 0 | 3 | out_OBUF
+ATTRIBUTES | 396034 | 0
+INPUTS | 7 | B<0>  | sel<1>  | A<0>  | sel<2>  | sel<0>  | EXP0_.EXP  | EXP1_.EXP
+INPUTMC | 2 | 0 | 2 | 0 | 4
+INPUTP | 5 | 8 | 36 | 35 | 9 | 11
+IMPORTS | 2 | 0 | 2 | 0 | 4
+EQ | 13 | 
+   !out = !B<0> & !sel<1> & !A<0>
+	# sel<2> & sel<0> & B<0> & sel<1>
+	# sel<2> & !sel<0> & !B<0> & !sel<1>
+	# sel<2> & B<0> & sel<1> & A<0>
+	# sel<0> & B<0> & sel<1> & A<0>
+;Imported pterms FB1_3
+	# sel<2> & sel<0> & sel<1> & A<0>
+	# sel<2> & !sel<0> & !B<0> & !A<0>
+	# !sel<2> & B<0> & !sel<1> & A<0>
+;Imported pterms FB1_5
+	# sel<2> & !sel<0> & !sel<1> & !A<0>
+	# !sel<2> & !sel<0> & B<0> & sel<1> & !A<0>
+	# !sel<2> & !sel<0> & !B<0> & sel<1> & A<0>;
+
+MACROCELL | 0 | 2 | EXP0_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 3
+INPUTS | 5 | sel<2>  | sel<0>  | sel<1>  | A<0>  | B<0>
+INPUTP | 5 | 9 | 11 | 36 | 35 | 8
+EXPORTS | 1 | 0 | 3
+EQ | 3 | 
+       EXP0_.EXP  =  sel<2> & sel<0> & sel<1> & A<0>
+	# sel<2> & !sel<0> & !B<0> & !A<0>
+	# !sel<2> & B<0> & !sel<1> & A<0>
+
+MACROCELL | 0 | 4 | EXP1_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 3
+INPUTS | 5 | sel<2>  | sel<0>  | sel<1>  | A<0>  | B<0>
+INPUTP | 5 | 9 | 11 | 36 | 35 | 8
+EXPORTS | 1 | 0 | 3
+EQ | 3 | 
+       EXP1_.EXP  =  sel<2> & !sel<0> & !sel<1> & !A<0>
+	# !sel<2> & !sel<0> & B<0> & sel<1> & !A<0>
+	# !sel<2> & !sel<0> & !B<0> & sel<1> & A<0>
+
+PIN | sel<2> | 64 | 0 | N/A | 9 | 3 | 0 | 3 | 0 | 2 | 0 | 4
+PIN | sel<0> | 64 | 0 | N/A | 11 | 3 | 0 | 3 | 0 | 2 | 0 | 4
+PIN | B<0> | 64 | 0 | N/A | 8 | 3 | 0 | 3 | 0 | 2 | 0 | 4
+PIN | sel<1> | 64 | 0 | N/A | 36 | 3 | 0 | 3 | 0 | 2 | 0 | 4
+PIN | A<0> | 64 | 0 | N/A | 35 | 3 | 0 | 3 | 0 | 2 | 0 | 4
+PIN | out | 536871040 | 0 | N/A | 4
